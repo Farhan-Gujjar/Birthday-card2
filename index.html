@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Happy Birthday 🎉</title>
+<style>
+  :root{
+    --bg:#fff9f2; --card:#ffffff; --accent:#ff6b6b; --muted:#6b7280;
+    --maxw:900px;
+  }
+  *{box-sizing:border-box}
+  body{font-family:'Poppins', sans-serif; margin:0; background:linear-gradient(180deg,#ffecd2,#fcb69f); color:#111827; display:flex; justify-content:center; padding:28px; min-height:100vh; overflow-x:hidden}
+  .wrap{width:100%;max-width:var(--maxw)}
+  .card{background:var(--card);border-radius:20px;padding:20px;box-shadow:0 8px 30px rgba(15,23,42,0.15);animation:fadeIn 1.2s ease}
+  header{text-align:center; margin-bottom:20px}
+  header h1{margin:0;font-size:2.2rem;color:var(--accent);animation:bounce 2s infinite}
+  header .sub{color:var(--muted);font-size:1rem;margin-top:6px}
+  .wish-banner{background:linear-gradient(90deg,#ff6b6b,#ff9f43);color:white;padding:14px;border-radius:14px;text-align:center;font-size:1.3rem;font-weight:600;margin:18px 0;animation:slideIn 1s ease}
+
+  .layout{display:grid;grid-template-columns:1fr;gap:18px}
+  .preview{border-radius:16px;overflow:hidden;background:#000;display:flex;align-items:center;justify-content:center;min-height:300px;animation:zoomIn 1s ease}
+  .preview img, .preview video{width:100%;height:100%;object-fit:cover;display:block}
+
+  .meta{padding:16px;text-align:center}
+  .title{font-weight:700;font-size:1.6rem;margin-bottom:10px;color:var(--accent)}
+  .message{font-size:1.1rem;line-height:1.5;margin:10px 0;animation:fadeInUp 1.5s ease}
+  .from{color:var(--muted);font-size:1rem;margin-top:10px}
+
+  .controls{display:flex;gap:10px;align-items:center;justify-content:center;margin-top:16px}
+  .btn{background:var(--accent);color:white;padding:8px 14px;border-radius:9px;border:none;cursor:pointer;transition:0.3s}
+  .btn:hover{opacity:0.8;transform:scale(1.05)}
+  .btn.ghost{background:transparent;color:var(--accent);border:1px solid rgba(255,107,107,0.4)}
+  .thumbs{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;justify-content:center}
+  .thumb{width:80px;height:80px;border-radius:10px;overflow:hidden;border:2px solid transparent;background:#000;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:0.3s}
+  .thumb:hover{transform:scale(1.1)}
+  .thumb.active{border-color:var(--accent)}
+  .thumb img, .thumb video{width:100%;height:100%;object-fit:cover;display:block}
+
+  footer{margin-top:24px;text-align:center;color:var(--muted);font-size:0.9rem}
+
+  @keyframes fadeIn {from{opacity:0}to{opacity:1}}
+  @keyframes fadeInUp {from{opacity:0; transform:translateY(20px)}to{opacity:1; transform:translateY(0)}}
+  @keyframes zoomIn {from{transform:scale(0.9);opacity:0}to{transform:scale(1);opacity:1}}
+  @keyframes slideIn {from{transform:translateX(-100%);opacity:0}to{transform:translateX(0);opacity:1}}
+  @keyframes bounce {0%,20%,50%,80%,100%{transform:translateY(0)}40%{transform:translateY(-12px)}60%{transform:translateY(-6px)}}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <h1>🎂 Happy Birthday Dear Brother 🎂</h1>
+        <div class="sub">A small surprise made with love 💖</div>
+      </header>
+
+      <div class="wish-banner">Wishing you endless joy, health, and happiness on your special day! 🎉</div>
+
+      <div class="layout">
+        <div>
+          <div id="previewArea" class="preview"></div>
+          <div class="meta">
+            <div class="title" id="wishTitle"></div>
+            <div class="message" id="wishMessage"></div>
+            <div class="from" id="wishFrom"></div>
+
+            <div class="controls">
+              <button id="prevBtn" class="btn ghost">⟨ Prev</button>
+              <button id="nextBtn" class="btn ghost">Next ⟩</button>
+              <button id="playBtn" class="btn">Play / Pause</button>
+            </div>
+
+            <div class="thumbs" id="thumbs"></div>
+          </div>
+        </div>
+      </div>
+
+      <footer>Made with ❤️ by Farhan</footer>
+    </div>
+  </div>
+
+<script src="./data/script.js">
+
+</script>
+</body>
+</html>
